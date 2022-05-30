@@ -368,7 +368,7 @@ export default {
         formData.append('content', this.textEdit)
         formData.append('image', this.fileEdit)
         const response = await fetch(
-          `https://groupomaedromaback.herokuapp.com/api/posts/${this.post.id}`,
+          `http://localhost:8081/api/posts/${this.post.id}`,
           {
             method: 'PUT',
             headers: {
@@ -397,7 +397,7 @@ export default {
     },
     async deletePost() {
       const response = await fetch(
-        `https://groupomaedromaback.herokuapp.com/api/posts/${this.post.id}`,
+        `http://localhost:8081/api/posts/${this.post.id}`,
         {
           method: 'DELETE',
           headers: {

@@ -202,6 +202,7 @@ exports.update = async (req, res) => {
 };
 
 exports.delete = async (req, res) => {
+  console.log(req.params.id)
   try {
     const post = await posts.findOne({
       where: {
